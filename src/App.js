@@ -202,7 +202,7 @@ const App = () => {
                         <Route path='*' component={NotFound} />
                     </Switch>
                 </Container>
-                <Footer />
+                {/* <Footer/> */}
             </Router>
         </>
     );
