@@ -1,22 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+
 import './Notice.css';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { useEffect } from 'react';
 import axios from 'axios';
 
 const Notice = () => {
     const [allNotice, setAllNotice] = useState([]);
-
-    // get
-    useEffect(() => {
-        axios
-            .get('http://localhost:3005/all-notices')
-            .then((response) => setAllNotice(response.data));
-        // console.log(allNotice);
-    });
 
     // Post
     const [notice, setNotice] = useState({
@@ -39,10 +31,13 @@ const Notice = () => {
         console.log(notice);
         axios
             .post('http://localhost:3005/add-notice', notice)
-            .then((response) => {})
+            .then((response) => {
+                alert('User Data Successfully Store to Database..');
+            })
             .catch((err) => {
                 console.log(err);
             });
+
         setNotice({
             title: '',
             notice_type: '',
@@ -51,6 +46,13 @@ const Notice = () => {
             date: '',
         });
     };
+    // get
+    useEffect(() => {
+        axios
+            .get('http://localhost:3005/all-notices')
+            .then((response) => setAllNotice(response.data));
+        // console.log(allNotice);
+    });
 
     // Delete Data
     const deleteNotice = (id) => {
