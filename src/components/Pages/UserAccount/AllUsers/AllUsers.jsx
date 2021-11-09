@@ -20,7 +20,7 @@ const AllUsers = () => {
     // Delete Data
     const deleteUser = (id) => {
         axios
-            .delete(`http://localhost:3005/all-users/${id}`)
+            .delete(`http://localhost:3005/delete-user/${id}`)
             .then((res) => res.data);
     };
 
@@ -31,23 +31,29 @@ const AllUsers = () => {
                     <h3>All Users</h3>
                 </div>
                 <div className='all__users__container shawdow-sm border rounded p-3'>
-                    <Table striped bordered hover>
+                    <Table
+                        striped
+                        bordered
+                        rounded
+                        hover
+                        size='lg'
+                        className='text-center'>
                         <thead>
                             <tr>
-                                <th scope='col'>ID</th>
-                                <th scope='col'>Name</th>
-                                <th scope='col'>User Type</th>
-                                <th scope='col'>Gender</th>
-                                <th scope='col'>Date Of Birth</th>
-                                <th scope='col'>Religion</th>
-                                <th scope='col'>Department</th>
-                                <th scope='col'>Section</th>
-                                <th scope='col'>Email</th>
-                                <th scope='col'>Phone</th>
-                                <th scope='col'>Address</th>
-                                <th scope='col'>Short Bio</th>
-                                {/* <th scope='col'>Photo</th> */}
-                                <th scope='col'>Actions</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>User Type</th>
+                                <th>Gender</th>
+                                <th>Date Of Birth</th>
+                                <th>Religion</th>
+                                <th>Department</th>
+                                <th>Section</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Short Bio</th>
+                                {/* <th>Photo</th> */}
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         {users.map((user, index) => {

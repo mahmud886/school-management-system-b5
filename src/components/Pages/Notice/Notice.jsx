@@ -57,13 +57,13 @@ const Notice = () => {
     // Delete Data
     const deleteNotice = (id) => {
         axios
-            .delete(`http://localhost:3005/notice/${id}`)
+            .delete(`http://localhost:3005/delete-notices/${id}`)
             .then((res) => res.data);
     };
 
     return (
         <>
-            <Container>
+            <Container fluid>
                 <div className='top-header py-5'>
                     <h3>Notices</h3>
                 </div>
