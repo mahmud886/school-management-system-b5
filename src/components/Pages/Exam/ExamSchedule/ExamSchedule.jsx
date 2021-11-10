@@ -156,7 +156,7 @@ const ExamSchedule = () => {
                                         className='mb-3'
                                         controlId='formPostBy'>
                                         <Form.Label className='text-muted'>
-                                            Post Date
+                                            Exam Date
                                         </Form.Label>
                                         <Form.Control
                                             type='date'

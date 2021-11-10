@@ -68,7 +68,7 @@ const ExamGrades = () => {
         <>
             <Container fluid>
                 <div className='top-header py-5'>
-                    <h3>Exam Schedules</h3>
+                    <h3>Exam Grades</h3>
                 </div>
 
                 {/* Create Notice */}
@@ -76,7 +76,7 @@ const ExamGrades = () => {
                     <Col md={4}>
                         <div className='shadow-sm bg-white rounded'>
                             <div className='inner__container py-4 px-3'>
-                                <h5 className='py-1'>Create Exam Schedule</h5>
+                                <h5 className='py-1'>Create Exam Grades</h5>
 
                                 {/* Form */}
                                 <Form onSubmit={(e) => onSubmitHandler(e)}>
